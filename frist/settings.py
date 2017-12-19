@@ -1,3 +1,4 @@
+# -*- coding:utf-8  -*-
 """
 Django settings for frist project.
 
@@ -86,15 +87,15 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'  # 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'  # 'UTC'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False  # True
 
 
 # Static files (CSS, JavaScript, Images)

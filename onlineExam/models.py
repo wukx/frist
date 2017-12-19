@@ -15,8 +15,12 @@ class ExerCategory(models.Model):
     sort = models.IntegerField(default=1)
     is_display = models.BooleanField(default=True)
 
+    class Meta:
+        verbose_name = u'类别'
+        verbose_name_plural = verbose_name
+
     def __unicode__(self):
-        return self
+        return self.title
 
 
 class ExerContent(models.Model):
@@ -27,5 +31,9 @@ class ExerContent(models.Model):
     addTime = models.DateTimeField(verbose_name="添加时间", auto_now_add=True)
     modifyTime = models.DateTimeField(verbose_name="最后修改时间", auto_now=True)
     linkExerCategory = models.ForeignKey(ExerCategory, null=True, blank=True, related_name='+')
+
+    class Meta:
+        verbose_name = u"题库"
+        verbose_name_plural = verbose_name
 
 
